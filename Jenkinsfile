@@ -22,6 +22,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId:"docker",usernameVariable:"USER",passwordVariable:"PASS")]) {
                 sh 'sudo docker login -u ${USER} -p ${PASS}'
+                git 'https://github.com/mohamedmedhat22/Devops-Projects.git'
                 sh 'eksctl create cluster -f eks.yaml'
                 sh 'kubectl apply -f deployment.yaml'
                 sh 'kubectl apply -f service.yaml'
