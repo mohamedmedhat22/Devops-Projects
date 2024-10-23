@@ -5,7 +5,6 @@ pipeline {
         stage('prep'){
             steps {
                 git 'https://github.com/IslamReda/jenkins_nodejs_example.git'
-                git 'https://github.com/mohamedmedhat22/Devops-Projects.git'
             }
         }
     
