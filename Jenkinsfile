@@ -31,7 +31,7 @@ pipeline {
                 }
             }
         }
-
+    }
         post {
             success {
                 slackSend(channel: 'devops-project', color: 'good', message: "SUCESS: JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
@@ -40,5 +40,5 @@ pipeline {
                 slackSend(channel: 'devops-project', color: 'danger', message: "FAILURE: JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
-    }
+    
 }    
