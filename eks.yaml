@@ -14,7 +14,7 @@ managedNodeGroups:
 
     ssh: 
       allow: true
-      publicKeyName: ssh_m
+      publicKeyName: SSH
     
     labels:
       role: worker
